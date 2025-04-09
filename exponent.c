@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
     int a, b;
@@ -18,9 +19,10 @@ int main() {
             else
                 printf("Error: Division by zero\n");
             break;
+        case '^': printf("Result: %.2lf\n", pow(a, b)); break;
         default: printf("Invalid operator\n");
     }
-    
+   
     printf("Enter hex expression (e.g. A + F): ");
     scanf("%x %c %x", &a, &op, &b);
 
